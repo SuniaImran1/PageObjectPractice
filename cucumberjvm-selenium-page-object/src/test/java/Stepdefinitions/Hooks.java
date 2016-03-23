@@ -1,4 +1,4 @@
-package step_definitions;
+package Stepdefinitions;
 
 import java.net.MalformedURLException;
 

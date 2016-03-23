@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @Cucumber.Options(
-		features = "src/test/Cucumber",
+		features = "src/test/resources/features/completeOrder",
 		format = {"pretty", "html:target/cucumber-html-report","json:cucumber.json"},
 		tags = {}
 		)
