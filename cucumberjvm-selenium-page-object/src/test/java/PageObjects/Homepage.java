@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import cucumber.api.java.Before;
+
 // go to the guru99 demo home page
 // check Guru99 Bank is present
 
@@ -13,6 +15,7 @@ public class Homepage extends BaseClass{
 	
 	public void navigatetoHomePage(String url)
 	{
+		BaseClass.getDriver();
 		driver.get(url);
 	}
 	

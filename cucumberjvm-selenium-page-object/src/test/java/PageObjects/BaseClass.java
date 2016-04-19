@@ -25,6 +25,11 @@ public class BaseClass{
 			return driver;
 		}
 	}
+
+	public static void setDriver(WebDriver object) {
+		driver=object;
+		
+	}
 	
 	
 	

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class SignIn_Page extends BaseClass{
+public class SignIn_SignOutPage extends BaseClass{
 	
 	@FindBy(how=How.ID, using="email")
 	public static WebElement email;
@@ -22,6 +22,8 @@ public class SignIn_Page extends BaseClass{
 	@FindBy(how=How.ID, using="SubmitCreate")
 	public static WebElement submit_create;
 	
+	@FindBy (how=How.XPATH,using=".//*[@class='logout']")
+	public static WebElement signout_button;
 	
 	public void signUsingEmail(String username,String pwd)
 	{
@@ -29,5 +31,9 @@ public class SignIn_Page extends BaseClass{
 		email.sendKeys(username);
 		password.sendKeys(pwd);
 		signin_button.click();
+	}
+	public void signOutButton(){
+		signout_button.click();
+		
 	}
 }

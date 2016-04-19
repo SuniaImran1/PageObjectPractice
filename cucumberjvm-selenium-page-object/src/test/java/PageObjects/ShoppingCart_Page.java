@@ -14,7 +14,7 @@ public class ShoppingCart_Page extends BaseClass {
 	@FindBy(how = How.XPATH, using = "//*[@id='add_to_cart']/button")
 	public static WebElement AddToCart;
 
-	@FindBy(how = How.XPATH, using = "//*[@id='layer_cart']/div[1]/div[1]/h2")
+	@FindBy(how = How.XPATH, using = ".//*[@id='layer_cart']/div[1]/div[1]/h2")
 	public static WebElement VerifyProductSuccessfullyAddedToCart;
 
 	@FindBy(how = How.XPATH, using = "//*[@id='layer_cart']/div[1]/div[2]/div[1]/strong")
@@ -34,16 +34,16 @@ public class ShoppingCart_Page extends BaseClass {
 
 	public void proceedToCheckOut() throws InterruptedException {
 
-	
+
+
+		Assert.assertTrue(VerifyProductSuccessfullyAddedToCart.isDisplayed());
+
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 
 			e.printStackTrace();
 		}
-
-		Assert.assertTrue(VerifyProductSuccessfullyAddedToCart.isDisplayed());
-
 		Assert.assertTrue(VerifyTotalProductsAvailable.isDisplayed());
 		Assert.assertTrue(VerifyTotalShippingAvailable.isDisplayed());
 

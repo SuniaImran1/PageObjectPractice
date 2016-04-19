@@ -14,7 +14,7 @@ public class orderconfirmation_page extends BaseClass {
 		
 	
 	
-	@FindBy(how = How.XPATH, using = "//*[@type='submit']")
+	@FindBy(how = How.XPATH, using = "//button/span[text()='I confirm my order']")
 	public static WebElement ConfirmOrder;
 
 	

@@ -13,118 +13,208 @@
     "line": 2,
     "elements": [
       {
-        "id": "order;order-confirmation",
+        "after": [
+          {
+            "result": {
+              "duration": 18916669,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SignInSignOut_Steps.close_Browser()"
+            }
+          }
+        ],
+        "id": "order;order-confirmation;;2",
+        "tags": [
+          {
+            "name": "@Current",
+            "line": 18
+          },
+          {
+            "name": "@Order",
+            "line": 1
+          }
+        ],
         "description": "",
         "name": "order confirmation",
-        "keyword": "Scenario",
-        "line": 4,
+        "keyword": "Scenario Outline",
+        "line": 36,
         "steps": [
           {
             "result": {
-              "duration": 25351678668,
+              "duration": 6395109935,
               "status": "passed"
             },
             "name": "I open automationpractice website",
             "keyword": "When ",
-            "line": 5,
+            "line": 20,
             "match": {
               "location": "SignInSignOut_Steps.I_open_automationpractice_website()"
             }
           },
           {
             "result": {
-              "duration": 5001174436,
+              "duration": 4064261100,
               "status": "passed"
             },
             "name": "I sign in",
             "keyword": "And ",
-            "line": 6,
+            "line": 21,
             "match": {
               "location": "SignInSignOut_Steps.I_sign_in()"
             }
           },
           {
             "result": {
-              "duration": 13274546908,
+              "duration": 4902099018,
               "status": "passed"
             },
-            "name": "I select a dress and add to cart",
+            "name": "I select a dress",
             "keyword": "And ",
-            "line": 7,
+            "line": 22,
             "match": {
-              "location": "Checkout_Steps.I_select_a_dress_and_proceed_to_checkout()"
+              "location": "Checkout_Steps.I_select_a_dress()"
             }
           },
           {
             "result": {
-              "duration": 1497992626,
+              "duration": 1810090509,
               "status": "passed"
+            },
+            "name": "I select colour as \"Orange\"",
+            "keyword": "And ",
+            "line": 23,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Orange",
+                  "offset": 20
+                }
+              ],
+              "location": "Checkout_Steps.I_select_colour_as(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 2431062613,
+              "status": "passed"
+            },
+            "name": "I select size as \"S\"",
+            "keyword": "And ",
+            "line": 24,
+            "match": {
+              "arguments": [
+                {
+                  "val": "S",
+                  "offset": 18
+                }
+              ],
+              "location": "Checkout_Steps.I_select_size_as(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 37209752,
+              "status": "failed",
+              "error_message": "org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been \"select\" but was \"input\"\nBuild info: version: \u00272.44.0\u0027, revision: \u002776d78cf323ce037c5f92db6c1bba601c2ac43ad8\u0027, time: \u00272014-10-23 13:11:40\u0027\nSystem info: host: \u0027desktop\u0027, ip: \u0027127.0.0.1\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00272.6.32-573.7.1.el6.x86_64\u0027, java.version: \u00271.7.0_51\u0027\nDriver info: driver.version: unknown\n\tat org.openqa.selenium.support.ui.Select.\u003cinit\u003e(Select.java:47)\n\tat PageObjects.SelectAndAddToCart_page.QuantityOfDresses(SelectAndAddToCart_page.java:83)\n\tat Stepdefinitions.Checkout_Steps.I_select_quantity_as(Checkout_Steps.java:36)\n\tat ✽.And I select quantity as \"2\"(src/test/resources/features/completeOrder.feature:25)\n"
+            },
+            "name": "I select quantity as \"2\"",
+            "keyword": "And ",
+            "line": 25,
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 22
+                }
+              ],
+              "location": "Checkout_Steps.I_select_quantity_as(String)"
+            },
+            "matchedColumns": [
+              2
+            ]
+          },
+          {
+            "result": {
+              "status": "skipped"
             },
             "name": "I verify details on shoppingCart and proceed to checkout",
             "keyword": "And ",
-            "line": 8,
+            "line": 26,
             "match": {
               "location": "shoppingcart_Steps.I_verify_details_on_shoppingCart_summary_page()"
             }
           },
           {
             "result": {
-              "duration": 2923195009,
-              "status": "passed"
+              "status": "skipped"
             },
             "name": "I verify details on the confirmation page and proceed to checkout",
             "keyword": "And ",
-            "line": 9,
+            "line": 27,
             "match": {
               "location": "address_Steps.I_verify_address_and_proceed()"
             }
           },
           {
             "result": {
-              "duration": 5896756439,
-              "status": "passed"
+              "status": "skipped"
             },
             "name": "I verify address details and proceed",
             "keyword": "And ",
-            "line": 10,
+            "line": 28,
             "match": {
               "location": "Address_Steps.I_verify_shipping_details_and_proceed()"
             }
           },
           {
             "result": {
-              "duration": 7520117505,
-              "status": "passed"
+              "status": "skipped"
             },
             "name": "I verify payment details page and proceed",
             "keyword": "And ",
-            "line": 11,
+            "line": 29,
             "match": {
               "location": "payment_Steps.I_verify_payment_details_page_and_proceed()"
             }
           },
           {
             "result": {
-              "duration": 309638795,
-              "status": "passed"
+              "status": "skipped"
             },
             "name": "I verify order procedure page and proceed",
             "keyword": "And ",
-            "line": 12,
+            "line": 30,
             "match": {
               "location": "OrderConfirmation.I_verify_order_procedure_page_and_proceed()"
             }
           },
           {
             "result": {
-              "duration": 4668397491,
-              "status": "passed"
+              "status": "skipped"
             },
             "name": "I verify order confirmation page details and verify success message",
             "keyword": "Then ",
-            "line": 13,
+            "line": 31,
             "match": {
               "location": "OrderConfirmation.I_verify_order_confirmation_page_details_and_verify_success_message()"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "name": "I sign out",
+            "keyword": "Then ",
+            "line": 32,
+            "match": {
+              "location": "SignInSignOut_Steps.I_sign_out()"
             }
           }
         ],
