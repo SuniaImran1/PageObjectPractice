@@ -1,9 +1,9 @@
 @Order
-Feature: order
+Feature: Verify purchase of one dress
 
   Scenario: order confirmation
-    When I open automationpractice website
-    And I sign in
+    Given I open automationpractice website
+    When I sign in
     And I select a dress
     And I select colour as "Orange"
     And I select size as "S"
@@ -13,12 +13,11 @@ Feature: order
     And I verify payment details page and proceed
     And I verify order procedure page and proceed
     Then I verify order confirmation page details and verify success message
-    Then I sign out
+    And I sign out
 
-  @Current
-  Scenario Outline: order confirmation
-    When I open automationpractice website
-    And I sign in
+  Scenario Outline: Verify order details with chosen size and quantity
+    Given I open automationpractice website
+    When I sign in
     And I select a dress
     And I select colour as "<Colour>"
     And I select size as "<Size>"
@@ -29,8 +28,13 @@ Feature: order
     And I verify payment details page and proceed
     And I verify order procedure page and proceed
     Then I verify order confirmation page details and verify success message
-    Then I sign out
+    And I sign out
 
     Examples: 
       | Colour | Size | Quantity |
       | Orange | S    | 2        |
+      | Black  | M    | 2        |
+      | Blue   | L    | 2        |
+      | Yellow | S    | 4        |
+    
+      

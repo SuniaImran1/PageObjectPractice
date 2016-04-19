@@ -27,7 +27,7 @@ public class Checkout_Steps {
 	public void I_select_size_as(String Size) throws Throwable {
 		addToCartPage.selectSize(Size);
 		
-		SelectAndAddToCart_page.AddToCart.click();
+		
 		Thread.sleep(2000);
 	}
 

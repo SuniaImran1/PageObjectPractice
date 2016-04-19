@@ -79,7 +79,9 @@ public class SelectAndAddToCart_page {
 	}
 
 	public void QuantityOfDresses(String Quantity) {
+		QuantityOfDresses.clear();
 		QuantityOfDresses.sendKeys(Quantity);
+		SelectAndAddToCart_page.AddToCart.click();
 	
 	}
 
