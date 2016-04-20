@@ -18,6 +18,22 @@ public class Checkout_Steps {
 
 	}
 
+	@When("^I select dress option as \"([^\"]*)\"$")
+	public void I_select_dress_option_as(String arg1) throws Throwable {
+		addToCartPage.SelectDressOption_WOMEN();
+
+	}
+
+	@When("^I select categories as  \"([^\"]*)\"$")
+	public void I_select_categories_as(String arg1) throws Throwable {
+addToCartPage.selectCategories_DRESSES();
+	}
+
+	@When("^I select an item with (\\d+)% off the orignal price$")
+	public void I_select_an_item_with_off_the_orignal_price(int arg1) throws Throwable {
+addToCartPage.SelectYellowDress_20PERCENToff();
+	}
+
 	@When("^I select colour as \"([^\"]*)\"$")
 	public void I_select_colour_as(String Colour) throws Throwable {
 		addToCartPage.selectColorAndAddToCart(Colour);
@@ -26,8 +42,7 @@ public class Checkout_Steps {
 	@When("^I select size as \"([^\"]*)\"$")
 	public void I_select_size_as(String Size) throws Throwable {
 		addToCartPage.selectSize(Size);
-		
-		
+
 		Thread.sleep(2000);
 	}
 
